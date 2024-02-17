@@ -17,5 +17,5 @@
 
 #### GUIDES:
 
-1. ##### Setup Guide [[Here](docs\guides\markdowns\projectSetup.md)].
-2. ##### Read Project Structure Guide. [[Here](.\docs\architecture\markdowns\directory.md)]
+1. ##### Setup Guide [[Here](./docs/guides/markdowns/projectSetup.md)].
+2. ##### Read Project Structure Guide. [[Here](./docs/architecture/markdowns/directory.md)]
