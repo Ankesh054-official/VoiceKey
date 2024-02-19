@@ -1,5 +1,6 @@
 from . import sr
 
+
 class SpeechRecognizer:
     
 
@@ -8,13 +9,21 @@ class SpeechRecognizer:
         self.recognizer = sr.Recognizer()
         self.microphone = sr.Microphone()
 
+        self.audio = None
+
+        print("Initilizing")
+
+
 
     def recognize(self):
 
         try:
-            _recognized_text = self.recognizer.recognize_google(self.audio)
-            print(f"user said: {_recognized_text}")
-            return _recognized_text
+            if(str(type(self.audio)) == "<class 'speech_recognition.audio.AudioData'>"):
+                
+                _recognized_text = self.recognizer.recognize_google(self.audio)
+                self.audio = None
+                print(f"user said: {_recognized_text}")
+                return _recognized_text
         except sr.UnknownValueError:
             print("Sorry, could not understand audio.")
         except sr.RequestError as e:
@@ -30,7 +39,12 @@ class SpeechRecognizer:
     def get_audio(self):
 
         with self.microphone as source:
-            print("Listen ...")
             self.recognizer.adjust_for_ambient_noise(source)
-            self.audio = self.recognizer.listen(source)
+            
+            print("Listning")
+            while True:
+                try:
+                    self.audio = self.recognizer.listen(source)
+                except sr.RequestError as e:
+                    print("Error requesting results; {0}".format(e))
 

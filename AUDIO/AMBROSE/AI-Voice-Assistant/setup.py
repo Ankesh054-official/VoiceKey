@@ -22,7 +22,7 @@ setup(
     install_requires=find_requirements(),
     entry_points={
         'console_scripts': [
-            'assistant-launch = start',
+            'assistant-launch = platforms.desktop.main:start',
         ]
     },
     classifiers=[

@@ -1,5 +1,8 @@
 from platforms.desktop import main
 
 if __name__ == "__main__":
-    main.start()
+    try:
+        main.start()
+    except KeyboardInterrupt:
+        print("Quitting process")
 
