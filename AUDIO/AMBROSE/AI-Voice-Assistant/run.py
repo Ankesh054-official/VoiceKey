@@ -5,4 +5,3 @@ if __name__ == "__main__":
         main.start()
     except KeyboardInterrupt:
         print("Quitting process")
-
