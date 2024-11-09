@@ -2,7 +2,6 @@ from . import sr
 
 
 class SpeechRecognizer:
-    
 
     def __init__(self, name="ambrose"):
         self.ASSISTANT = name
@@ -13,13 +12,11 @@ class SpeechRecognizer:
 
         print("Initilizing")
 
-
-
     def recognize(self):
 
         try:
             if(str(type(self.audio)) == "<class 'speech_recognition.audio.AudioData'>"):
-                
+
                 __recognized_text = self.recognizer.recognize_google(self.audio)
                 self.audio = None
                 print(f"user said: {__recognized_text}")
@@ -35,12 +32,11 @@ class SpeechRecognizer:
 
         return None
 
-
     def get_audio(self):
 
         with self.microphone as source:
             self.recognizer.adjust_for_ambient_noise(source)
-            
+
             print("Listning")
             while True:
                 try:
@@ -48,4 +44,3 @@ class SpeechRecognizer:
                 except sr.RequestError as e:
                     self.audio = None
                     print(f"Error requesting results; {e}")
-

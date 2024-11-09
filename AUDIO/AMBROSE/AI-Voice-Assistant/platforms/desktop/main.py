@@ -32,19 +32,19 @@ class Assistant:
                 self.say()
 
     def recognize_audio(self):
-        
+
         self.text_initlizer()
-        
+
 
 def start():
     ambrose = Assistant()
-    
+
     listen = threading.Thread(target=ambrose.listen)
-    
+
     text_init = threading.Thread(target=ambrose.recognize_audio)
-    
+
     speaker = threading.Thread(target=ambrose.say)
-    
+
     listen.start()
     text_init.start()
     speaker.start()
