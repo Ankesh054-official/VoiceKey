@@ -1,4 +1,5 @@
- <p style="display:flex; flex-direction:row;justify-content:center;align-items:center;"><img src="AUDIO/AMBROSE/AI-Voice-Assistant/assets/imgs/welcome.svg"></p>
+
+ <p style="display:flex; flex-direction:row;justify-content:center;align-items:center;"><img src="./assets/imgs/welcome.svg"></p>
 
 # PROJCT NAME: `ASSISTANT`
 >  **PROJECT DESCRIPTION:**
@@ -17,5 +18,5 @@
 
 #### GUIDES:
 
-1. ##### Setup Guide [[Here](./AUDIO/AMBROSE/AI-Voice-Assistant/docs/guides/markdowns/projectSetup.md)].
-2. ##### Read Project Structure Guide. [[Here](./AUDIO/AMBROSE/AI-Voice-Assistant/docs/architecture/markdowns/directory.md)]
+1. ##### Setup Guide [[Here](AUDIO/AMBROSE/AI-Voice-Assistant/docs/guides/markdowns/projectSetup.md)].
+2. ##### Read Project Structure Guide. [[Here](AUDIO/AMBROSE/AI-Voice-Assistant/docs/architecture/markdowns/directory.md)]
